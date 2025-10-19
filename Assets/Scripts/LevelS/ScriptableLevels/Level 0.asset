@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4b8675e943a1842924f05394eee0a6, type: 3}
+  m_Name: Level 0
+  m_EditorClassIdentifier: Assembly-CSharp::LevelScriptable
+  _starsObtained: 0
+  _levelTime: 60
+  _timeElapsed: 0
+  _gears: 10
+  _gearsUsed: 0
+  _isLevelCompleted: 0

@@ -1,17 +1,19 @@
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class DropCell : MonoBehaviour
 {
-    public void OnDrop(PointerEventData eventData)
+    public int slotX;
+    public int slotY;
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        DraggableGear draggedItem = Gear.Instance.currentDraggedItem;
+        
+    }
 
-        if (draggedItem != null)
-        {
-            draggedItem.transform.SetParent(transform);
-            draggedItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        }
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

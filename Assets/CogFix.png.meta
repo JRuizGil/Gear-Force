@@ -1,0 +1,604 @@
+fileFormatVersion: 2
+guid: a599118820de61f41b409435e537f832
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8396181086287363443
+    second: CogFix_0
+  - first:
+      213: -5893529211371893305
+    second: CogFix_1
+  - first:
+      213: 620333786666459156
+    second: CogFix_2
+  - first:
+      213: 4808523666676680012
+    second: CogFix_3
+  - first:
+      213: -8922704418318719766
+    second: CogFix_4
+  - first:
+      213: 8994304531095523461
+    second: CogFix_5
+  - first:
+      213: -6638063878408197233
+    second: CogFix_6
+  - first:
+      213: -5654382224612025154
+    second: CogFix_7
+  - first:
+      213: -119950064230190498
+    second: CogFix_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CogFix_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1130
+        width: 570
+        height: 570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37df20e863a358470800000000000000
+      internalID: 8396181086287363443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_5
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 2892
+        width: 1140
+        height: 1140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58092a1315032dc70800000000000000
+      internalID: 8994304531095523461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 3451
+        width: 570
+        height: 570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc97bd23599781b0800000000000000
+      internalID: -5654382224612025154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2857
+        width: 570
+        height: 570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903a6ed554315ad488e671a5c7ec2613
+      internalID: 255325540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_57
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 2274
+        width: 570
+        height: 570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb79cf7a46e86d4448b7c01ff8f0ef10
+      internalID: 743431952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_61
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 1740
+        width: 1140
+        height: 1140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fd2d23f6d9f594984e15472c30afee
+      internalID: -398204821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_76
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1699
+        width: 570
+        height: 570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4a4120dea6d5449b8a382376ce0988
+      internalID: -1920951314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_98
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 541
+        width: 1140
+        height: 1140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fd5dadfa4101a4da787aa1ed0b7f27
+      internalID: -116618940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_106
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 535
+        width: 570
+        height: 570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf97dce8ffec3b4697a4dfa15374c40
+      internalID: 1674039665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_132
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 520
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdc3fd8eb6da5342ba65b19b34eb39a
+      internalID: 1477952177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_133
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 508
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b103efc4c0a0152429117dcb229028f0
+      internalID: 906554307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_134
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 508
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d575328dec243847a4a5aea8bdb221c
+      internalID: 1817906226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_135
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 508
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a40ffa317657324b918fd9150c76e77
+      internalID: -1762923283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CogFix_136
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 496
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccb0695730fc2540acb7788a2b9d4c2
+      internalID: -58066755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 10f034752fa0d8e47a2a6b04c46a0067
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":460.0,"y":446.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      CogFix_0: 8396181086287363443
+      CogFix_1: -5893529211371893305
+      CogFix_10: 424897642
+      CogFix_100: 1392312921
+      CogFix_101: -1924302806
+      CogFix_102: -482605869
+      CogFix_103: 375644630
+      CogFix_104: -1973977259
+      CogFix_105: -70119195
+      CogFix_106: 1674039665
+      CogFix_107: 81911707
+      CogFix_108: 1189121045
+      CogFix_109: 693449822
+      CogFix_11: -1398023206
+      CogFix_110: -1441055141
+      CogFix_111: 1611491270
+      CogFix_112: -1535633999
+      CogFix_113: -1783943071
+      CogFix_114: -1060771016
+      CogFix_115: -481104173
+      CogFix_116: -1879205595
+      CogFix_117: 458144740
+      CogFix_118: 238573753
+      CogFix_119: 826916628
+      CogFix_12: -573048649
+      CogFix_120: 1851492513
+      CogFix_121: -1610135093
+      CogFix_122: -1060651523
+      CogFix_123: -536128416
+      CogFix_124: 557876128
+      CogFix_125: -693775682
+      CogFix_126: 90727454
+      CogFix_127: 1595634118
+      CogFix_128: 1301449383
+      CogFix_129: -1302746407
+      CogFix_13: -220349219
+      CogFix_130: 689204022
+      CogFix_131: 1273061500
+      CogFix_132: 1477952177
+      CogFix_133: 906554307
+      CogFix_134: 1817906226
+      CogFix_135: -1762923283
+      CogFix_136: -58066755
+      CogFix_14: 1288323882
+      CogFix_15: -655827354
+      CogFix_16: 1556096307
+      CogFix_17: 567169784
+      CogFix_18: 1214423248
+      CogFix_19: 1225744866
+      CogFix_2: 620333786666459156
+      CogFix_20: 1341657390
+      CogFix_21: -1705736658
+      CogFix_22: -1370398211
+      CogFix_23: 439824244
+      CogFix_24: -1336056199
+      CogFix_25: 255325540
+      CogFix_26: -950020417
+      CogFix_27: 346143578
+      CogFix_28: -1746711277
+      CogFix_29: -299937572
+      CogFix_3: 4808523666676680012
+      CogFix_30: -1969399478
+      CogFix_31: -1980782023
+      CogFix_32: 25457809
+      CogFix_33: 1429027886
+      CogFix_34: -183201188
+      CogFix_35: 255546218
+      CogFix_36: 531361672
+      CogFix_37: -327430556
+      CogFix_38: 1565272969
+      CogFix_39: 682662790
+      CogFix_4: -8922704418318719766
+      CogFix_40: 31100804
+      CogFix_41: -1686424847
+      CogFix_42: -129685075
+      CogFix_43: -1035870286
+      CogFix_44: 891827710
+      CogFix_45: -1579157252
+      CogFix_46: 1179396455
+      CogFix_47: -1864567722
+      CogFix_48: -402436424
+      CogFix_49: 1520817867
+      CogFix_5: 8994304531095523461
+      CogFix_50: -1997216178
+      CogFix_51: -524443061
+      CogFix_52: -1372047603
+      CogFix_53: 1702977958
+      CogFix_54: -893253766
+      CogFix_55: 347788090
+      CogFix_56: -934269712
+      CogFix_57: 743431952
+      CogFix_58: 1335301288
+      CogFix_59: -1234312613
+      CogFix_6: -6638063878408197233
+      CogFix_60: 1711129399
+      CogFix_61: -398204821
+      CogFix_62: -837488818
+      CogFix_63: 456644410
+      CogFix_64: 445979469
+      CogFix_65: -600806335
+      CogFix_66: 584339751
+      CogFix_67: -2083180853
+      CogFix_68: -2022327697
+      CogFix_69: 898279785
+      CogFix_7: -5654382224612025154
+      CogFix_70: 1612927833
+      CogFix_71: -1482293261
+      CogFix_72: 37550241
+      CogFix_73: -1453414702
+      CogFix_74: 1324576752
+      CogFix_75: 60088815
+      CogFix_76: -1920951314
+      CogFix_77: -1824692675
+      CogFix_78: -442220515
+      CogFix_79: -1918378611
+      CogFix_8: -119950064230190498
+      CogFix_80: -1280186684
+      CogFix_81: 537559696
+      CogFix_82: 1520720658
+      CogFix_83: -1874754004
+      CogFix_84: -172727511
+      CogFix_85: -585972888
+      CogFix_86: -2134672010
+      CogFix_87: 235032514
+      CogFix_88: -1191878601
+      CogFix_89: -1116650329
+      CogFix_9: 485614537
+      CogFix_90: -433557089
+      CogFix_91: 2090342544
+      CogFix_92: 1577679500
+      CogFix_93: -1815912095
+      CogFix_94: 2018286178
+      CogFix_95: -1557327045
+      CogFix_96: 496039206
+      CogFix_97: 752439141
+      CogFix_98: -116618940
+      CogFix_99: 1271804209
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

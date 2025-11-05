@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4b8675e943a1842924f05394eee0a6, type: 3}
   m_Name: Level 0
   m_EditorClassIdentifier: Assembly-CSharp::LevelScriptable
-  _starsObtained: 0
-  _levelTime: 60
-  _timeElapsed: 0
-  _gears: 10
-  _gearsUsed: 0
-  _isLevelCompleted: 0
+  currentLevel: 0
+  levelTime: 60
+  gears: 10
+  isLevelCompleted: 0
+  _gearSlotsX: 5
+  _gearSlotsY: 5

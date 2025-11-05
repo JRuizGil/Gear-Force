@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Level 7
   m_EditorClassIdentifier: Assembly-CSharp::LevelScriptable
   currentLevel: 7
-  starsObtained: 0
   levelTime: 60
-  timeElapsed: 0
   gears: 10
-  gearsUsed: 0
   isLevelCompleted: 0
+  _gearSlotsX: 8
+  _gearSlotsY: 8

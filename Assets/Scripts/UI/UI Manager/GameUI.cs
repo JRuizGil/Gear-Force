@@ -10,12 +10,20 @@ public class GameUI : UIWindow
     
     public LevelScriptable currentlevelScriptable;
     public TMP_Text currentlevelText;
-    public GameObject Dropcell;
-    public GridLayoutGroup gridLayoutGroup;
+    public GameObject DropcellPrefab;
+    public GameObject GearPrefab;
+    public GameObject GearToPower;
     public GameObject DropcellGrid;
-    private DropCell[,] _cells;
+    public GameObject PoweredGrid;
+    public GameObject PoweredCellPrefab;
+    public GameObject UnPoweredGrid;
+    public GameObject UnPoweredCellPrefab;
+    public Transform GearBox;
+    public GridLayoutGroup gridLayoutGroup;
+    public DropCell[,] _cells;
     public int width = 5;
     public int height = 5;
+    public Gear SelectedGear { get; private set; }
     public override void Initialize()
     {
         base.Initialize();
@@ -41,7 +49,7 @@ public class GameUI : UIWindow
         {
             for (int y = 0; y < height; y++)
             {
-                GameObject dropcellInstance = Instantiate(Dropcell, DropcellGrid.transform);
+                GameObject dropcellInstance = Instantiate(DropcellPrefab, DropcellGrid.transform);
                 DropCell dropCell = dropcellInstance.GetComponent<DropCell>();
                 dropCell.slotX = x;
                 dropCell.slotY = y;
@@ -49,7 +57,6 @@ public class GameUI : UIWindow
             }
         }
     }
-
     private void AdjustCellSize(int width, int height)
     {
         RectTransform rt = gridLayoutGroup.GetComponent<RectTransform>();
@@ -57,6 +64,7 @@ public class GameUI : UIWindow
         float cellHeight = rt.rect.height / height;
         gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
     }
+    
     public DropCell GetCell(int x, int y)
     {
         if (x < 0 || y < 0 || x >= _cells.GetLength(0) || y >= _cells.GetLength(1))
@@ -64,7 +72,39 @@ public class GameUI : UIWindow
 
         return _cells[x, y];
     }
-    
+
+    public void GenerateLevelGears()
+    {
+        foreach (Transform gear in GearBox.transform)
+        {
+            Destroy(gear.gameObject);
+        }
+        for (int i = 0; i < currentlevelScriptable.gears; i++)
+        {
+            GameObject GearInstance = Instantiate(GearPrefab, GearBox);
+        }
+    }
+    public void SelectGear(Gear gear)
+    {
+        SelectedGear = gear;
+        foreach (DropCell cell in _cells)
+        {
+            cell.SetColocationEnabled(true);
+        }
+    }
+    public void ClearSelection()
+    {
+        if (SelectedGear != null)
+        {
+            SelectedGear.isOnDropcell = true;
+        }
+
+        SelectedGear = null;
+
+        foreach (DropCell cell in _cells)
+        {
+            cell.SetColocationEnabled(false);
+        }
+    }
     #endregion
-    
 }

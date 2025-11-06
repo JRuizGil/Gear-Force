@@ -16,5 +16,8 @@ MonoBehaviour:
   levelTime: 60
   gears: 10
   isLevelCompleted: 0
-  _gearSlotsX: 8
-  _gearSlotsY: 8
+  _gearSlotsX: 7
+  _gearSlotsY: 7
+  gearstopower: 3
+  PoweredPosition: 4
+  UnPoweredPositions: 020000000400000006000000

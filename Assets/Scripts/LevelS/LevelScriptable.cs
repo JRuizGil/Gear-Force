@@ -9,4 +9,6 @@ public class LevelScriptable : ScriptableObject
     public int _gearSlotsX = 10;
     public int _gearSlotsY = 10;
     public int gearstopower = 1;
+    public int PoweredPosition = 1;
+    public int[] UnPoweredPositions = new int[1];
 }

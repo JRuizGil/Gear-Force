@@ -18,6 +18,6 @@ MonoBehaviour:
   isLevelCompleted: 0
   _gearSlotsX: 9
   _gearSlotsY: 9
-  gearstopower: 1
+  gearstopower: 5
   PoweredPosition: 1
-  UnPoweredPositions: 09000000
+  UnPoweredPositions: 0000000002000000040000000600000008000000

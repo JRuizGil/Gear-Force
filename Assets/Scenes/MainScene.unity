@@ -2096,13 +2096,16 @@ MonoBehaviour:
   currentlevelScriptable: {fileID: 0}
   currentlevelText: {fileID: 1760009779}
   DropcellPrefab: {fileID: 6475936419761645866, guid: 2c7c7cbf3a09a084c90b0b9a60d66f42, type: 3}
-  GearPrefab: {fileID: 2179217910079652712, guid: e9db49b3e1ab3064b996a9ac47f7422e, type: 3}
-  GearToPower: {fileID: 2179217910079652712, guid: 08d4b027aabb4484096e5ec925131e96, type: 3}
   DropcellGrid: {fileID: 1459768757}
+  GearPrefab: {fileID: 2179217910079652712, guid: e9db49b3e1ab3064b996a9ac47f7422e, type: 3}
   PoweredGrid: {fileID: 1160621264}
+  PoweredHorizontalLayoutGroup: {fileID: 1160621266}
   PoweredCellPrefab: {fileID: 8446342129574471914, guid: 57849876a3cf79d4986cac1deb6288df, type: 3}
+  GearPoweredPrefab: {fileID: 2179217910079652712, guid: 747e97e3e94c16349b9e2e11795c330e, type: 3}
   UnPoweredGrid: {fileID: 738660645}
+  UnPoweredHorizontalLayoutGroup: {fileID: 738660647}
   UnPoweredCellPrefab: {fileID: 2910257990202488209, guid: 0c6411914e011e74f98af9277da5ec77, type: 3}
+  GearToPowerPrefab: {fileID: 2179217910079652712, guid: 08d4b027aabb4484096e5ec925131e96, type: 3}
   GearBox: {fileID: 863006719}
   gridLayoutGroup: {fileID: 1459768760}
   width: 5
@@ -2162,11 +2165,11 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -2394,7 +2397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3004,7 +3007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3296,11 +3299,11 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 7
+  m_ChildAlignment: 6
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -5110,7 +5113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.4641509, g: 0.4641509, b: 0.4641509, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

@@ -35,6 +35,8 @@ public class LevelButtons : Level
         gameUI.width = levelScriptable._gearSlotsX;
         gameUI. height = levelScriptable._gearSlotsY;
         gameUI.GenerateDropcellsGrid();
+        gameUI.GenerateUnPoweredGrid();
+        gameUI.GeneratePoweredGrid();
         gameUI.GenerateLevelGears();
         gameUI.Show();
     }

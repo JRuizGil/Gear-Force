@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
@@ -10,16 +11,27 @@ public class GameUI : UIWindow
     
     public LevelScriptable currentlevelScriptable;
     public TMP_Text currentlevelText;
+    
     public GameObject DropcellPrefab;
-    public GameObject GearPrefab;
-    public GameObject GearToPower;
     public GameObject DropcellGrid;
+    
+    public GameObject GearPrefab;
+    
     public GameObject PoweredGrid;
+    public HorizontalLayoutGroup PoweredHorizontalLayoutGroup;
     public GameObject PoweredCellPrefab;
+    public GameObject GearPoweredPrefab;
+    
+    
     public GameObject UnPoweredGrid;
+    public HorizontalLayoutGroup UnPoweredHorizontalLayoutGroup;
     public GameObject UnPoweredCellPrefab;
+    public GameObject GearToPowerPrefab;
+    
     public Transform GearBox;
+    
     public GridLayoutGroup gridLayoutGroup;
+    
     public DropCell[,] _cells;
     public int width = 5;
     public int height = 5;
@@ -54,6 +66,38 @@ public class GameUI : UIWindow
                 dropCell.slotX = x;
                 dropCell.slotY = y;
                 _cells[x, y] = dropCell;
+            }
+        }
+    }
+
+    public void GeneratePoweredGrid()
+    {
+        foreach (Transform child in PoweredGrid.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        for (int i = 0; i < currentlevelScriptable._gearSlotsX; i++)
+        {
+            GameObject poweredCell = Instantiate(PoweredCellPrefab, PoweredGrid.transform);
+            if (i == currentlevelScriptable.PoweredPosition)
+            {
+                Instantiate(GearPoweredPrefab, poweredCell.transform);
+            }
+        }
+    }
+
+    public void GenerateUnPoweredGrid()
+    {
+        foreach (Transform child in UnPoweredGrid.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        for (int i = 0; i < currentlevelScriptable._gearSlotsX; i++)
+        {
+            GameObject unPoweredCell = Instantiate(UnPoweredCellPrefab, UnPoweredGrid.transform);
+            if (Array.Exists(currentlevelScriptable.UnPoweredPositions, pos => pos == i))
+            {
+                Instantiate(GearToPowerPrefab, unPoweredCell.transform);
             }
         }
     }

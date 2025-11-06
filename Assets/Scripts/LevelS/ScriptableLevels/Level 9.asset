@@ -20,4 +20,4 @@ MonoBehaviour:
   _gearSlotsY: 9
   gearstopower: 3
   PoweredPosition: 1
-  UnPoweredPositions: 010000000500000009000000
+  UnPoweredPositions: 000000000400000008000000

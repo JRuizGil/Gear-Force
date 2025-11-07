@@ -94,4 +94,5 @@ public static class WindowsIDs
     public static string PopupUI = "PopupUI";
     public static string MenuUI = "MenuUI";
     public static string LevelsUI = "LevelsUI";
+    public static string CompletedUI = "CompletedUI";
 }

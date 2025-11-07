@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelScriptable
   currentLevel: 6
   levelTime: 60
-  gears: 10
+  gears: 20
   isLevelCompleted: 0
   _gearSlotsX: 7
   _gearSlotsY: 7

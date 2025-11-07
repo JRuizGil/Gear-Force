@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameUI : UIWindow
@@ -28,6 +29,8 @@ public class GameUI : UIWindow
     public GameObject UnPoweredCellPrefab;
     public GameObject GearToPowerPrefab;
     
+    [SerializeField]private List<GameObject> _UnpoweredGears = new List<GameObject>();
+    public bool currentleveliscompleted = false;
     
     public Transform GearBox;
     
@@ -38,10 +41,13 @@ public class GameUI : UIWindow
     public int height = 5;
     public Gear SelectedGear { get; private set; }
     public PoweredGear currentPoweredGear;
+    private UIManager uiManager;
+    
 
     public override void Initialize()
     {
         base.Initialize();
+        uiManager = FindFirstObjectByType<UIManager>();
     }
     public void GenerateDropcellsGrid()
     {
@@ -52,7 +58,7 @@ public class GameUI : UIWindow
         {
             Destroy(child.gameObject);
         }
-
+        currentleveliscompleted = false;
         _cells = new DropCell[width, height];
         
         AdjustCellSize(width, height);
@@ -60,9 +66,9 @@ public class GameUI : UIWindow
         gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridLayoutGroup.constraintCount = width;
 
-        for (int x = 0; x < width; x++)
+        for (int y = 0; y < height; y++)
         {
-            for (int y = 0; y < height; y++)
+            for (int x = 0; x < width; x++)
             {
                 GameObject dropcellInstance = Instantiate(DropcellPrefab, DropcellGrid.transform);
                 DropCell dropCell = dropcellInstance.GetComponent<DropCell>();
@@ -97,13 +103,17 @@ public class GameUI : UIWindow
         foreach (Transform child in UnPoweredGrid.transform)
         {
             Destroy(child.gameObject);
+            _UnpoweredGears.Clear();
         }
         for (int i = 0; i < currentlevelScriptable._gearSlotsX; i++)
         {
             GameObject unPoweredCell = Instantiate(UnPoweredCellPrefab, UnPoweredGrid.transform);
             if (Array.Exists(currentlevelScriptable.UnPoweredPositions, pos => pos == i))
             {
+                
                 GameObject unpoweredinstance = Instantiate(GearToPowerPrefab, unPoweredCell.transform);
+                _UnpoweredGears.Add(unPoweredCell);
+                
                 GearToPower getunpoweredgear = unpoweredinstance.GetComponent<GearToPower>();
                 getunpoweredgear.Xposition = i;
             }
@@ -199,8 +209,9 @@ public class GameUI : UIWindow
         // Si quieres que el gear en la celda gire en sentido contrario al PoweredGear, usa:
         rootGear.direction = -powered.direction;
         // Si prefieres una dirección fija, puedes poner rootGear.direction = 1;
-
+        
         rootGear.SpreadPower();
+        CheckIfLevelCompleted();
     }
     public GearToPower GetUnPoweredGearAtColumn(int x)
     {
@@ -211,6 +222,22 @@ public class GameUI : UIWindow
         if (cell == null) return null;
 
         return cell.GetComponentInChildren<GearToPower>();
+    }
+
+    
+    public void CheckIfLevelCompleted()
+    {
+        if (currentleveliscompleted) return;
+
+        foreach (var gear in _UnpoweredGears)
+        {
+            GearToPower gearcs = gear.GetComponent<GearToPower>();
+            if (gearcs !=null && !gearcs.ispowered) 
+                return; // si uno aún no tiene power → salir sin completar
+        }
+        // ✅ Si llegamos aquí → todos están powereados
+        currentleveliscompleted = true;
+        uiManager.ShowUI("CompletedUI");
     }
     #endregion
 }

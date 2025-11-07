@@ -61,7 +61,7 @@ public class Gear : MonoBehaviour
         queue.Enqueue(this);
         visited.Add(this);
 
-        int bottomRow = gameUI.height - 1; // <- CORRECCIÓN: última fila = height - 1
+        int bottomRow = gameUI.height - 1;
 
         while (queue.Count > 0)
         {

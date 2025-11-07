@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GearToPower : MonoBehaviour
@@ -6,6 +7,8 @@ public class GearToPower : MonoBehaviour
     public int direction = 1;
     public float rotationSpeed = 10;
     public int Xposition;
+    public GearToPower[] gearsToPower;
+    
 
     private void FixedUpdate()
     {
@@ -13,4 +16,8 @@ public class GearToPower : MonoBehaviour
             transform.Rotate(0f, 0f, rotationSpeed * direction * Time.fixedDeltaTime);
     }
 
+    private void OnEnable()
+    {
+        gearsToPower = FindObjectsByType<GearToPower>(FindObjectsSortMode.None);
+    }
 }

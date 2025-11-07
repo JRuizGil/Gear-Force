@@ -28,6 +28,7 @@ public class GameUI : UIWindow
     public GameObject UnPoweredCellPrefab;
     public GameObject GearToPowerPrefab;
     
+    
     public Transform GearBox;
     
     public GridLayoutGroup gridLayoutGroup;
@@ -36,6 +37,8 @@ public class GameUI : UIWindow
     public int width = 5;
     public int height = 5;
     public Gear SelectedGear { get; private set; }
+    public PoweredGear currentPoweredGear;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -81,7 +84,10 @@ public class GameUI : UIWindow
             GameObject poweredCell = Instantiate(PoweredCellPrefab, PoweredGrid.transform);
             if (i == currentlevelScriptable.PoweredPosition)
             {
-                Instantiate(GearPoweredPrefab, poweredCell.transform);
+                GameObject poweredgearinstance = Instantiate(GearPoweredPrefab, poweredCell.transform);
+                PoweredGear getPoweredgear = poweredgearinstance.GetComponent<PoweredGear>();
+                getPoweredgear.Xposition = i;
+                currentPoweredGear = getPoweredgear;
             }
         }
     }
@@ -97,9 +103,13 @@ public class GameUI : UIWindow
             GameObject unPoweredCell = Instantiate(UnPoweredCellPrefab, UnPoweredGrid.transform);
             if (Array.Exists(currentlevelScriptable.UnPoweredPositions, pos => pos == i))
             {
-                Instantiate(GearToPowerPrefab, unPoweredCell.transform);
+                GameObject unpoweredinstance = Instantiate(GearToPowerPrefab, unPoweredCell.transform);
+                GearToPower getunpoweredgear = unpoweredinstance.GetComponent<GearToPower>();
+                getunpoweredgear.Xposition = i;
             }
+            
         }
+        
     }
     private void AdjustCellSize(int width, int height)
     {
@@ -142,13 +152,65 @@ public class GameUI : UIWindow
         {
             SelectedGear.isOnDropcell = true;
         }
-
+        
         SelectedGear = null;
 
         foreach (DropCell cell in _cells)
         {
             cell.SetColocationEnabled(false);
         }
+    }
+    public void RecalculatePower()
+    {
+        // 1) Apagar todos los gears del grid
+        for (int x = 0; x < _cells.GetLength(0); x++)
+        {
+            for (int y = 0; y < _cells.GetLength(1); y++)
+            {
+                DropCell cell = _cells[x, y];
+                if (cell == null) continue;
+                Gear g = cell.GetComponentInChildren<Gear>();
+                if (g != null)
+                {
+                    g.ispowered = false;
+                }
+            }
+        }
+
+        // 2) Buscar el PoweredGear (puedes cachearlo en GeneratePoweredGrid para mejor perf.)
+        PoweredGear powered = currentPoweredGear;
+        if (powered == null) return;
+
+        int px = powered.Xposition;
+        int py = 0; // la fila donde comienza la alimentación en tu grid
+
+        // 3) Obtener la celda de inicio en el grid
+        DropCell startCell = GetCell(px, py);
+        if (startCell == null) return;
+
+        // 4) Obtener el gear que esté en esa celda (si lo hay)
+        Gear rootGear = startCell.GetComponentInChildren<Gear>();
+        if (rootGear == null) return;
+
+        // 5) Encender el gear inicial y propagar
+        rootGear.ispowered = true;
+
+        // Opcional: sincronizar la dirección con el PoweredGear
+        // Si quieres que el gear en la celda gire en sentido contrario al PoweredGear, usa:
+        rootGear.direction = -powered.direction;
+        // Si prefieres una dirección fija, puedes poner rootGear.direction = 1;
+
+        rootGear.SpreadPower();
+    }
+    public GearToPower GetUnPoweredGearAtColumn(int x)
+    {
+        if (!Array.Exists(currentlevelScriptable.UnPoweredPositions, pos => pos == x))
+            return null;
+
+        Transform cell = UnPoweredGrid.transform.GetChild(x);
+        if (cell == null) return null;
+
+        return cell.GetComponentInChildren<GearToPower>();
     }
     #endregion
 }

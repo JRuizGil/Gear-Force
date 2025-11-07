@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6266800651125293193}
   - component: {fileID: 79943204335674050}
   - component: {fileID: 1896705445478643319}
+  - component: {fileID: 1098597737442013728}
   m_Layer: 0
   m_Name: GearToPower
   m_TagString: Untagged
@@ -88,3 +89,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1098597737442013728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2179217910079652712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcb1e043d0c594aa76fda23f4de98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  ispowered: 0
+  direction: 1
+  rotationSpeed: 10
+  Xposition: 0

@@ -43,11 +43,11 @@ public class DropCell : MonoBehaviour
         gear.transform.SetParent(transform, false);
         gear.transform.localPosition = Vector3.zero;
 
-        gear.CheckPosition(); // ✅ Actualiza slotX / slotY / isOnDropcell
+        gear.CheckPosition();
 
         _gameUI.ClearSelection();
 
-        // ✅ AHORA recalculamos TODO el mapa de energía
+        
         _gameUI.RecalculatePower();
     }
     public void SetColocationEnabled(bool enabledbutton)

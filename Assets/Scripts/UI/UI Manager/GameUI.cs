@@ -2,6 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class GameUI : UIWindow
 {
     #region Game Implementation
     
+    [Header("Game UI")]
     public LevelScriptable currentlevelScriptable;
     public TMP_Text currentlevelText;
     
@@ -29,7 +31,7 @@ public class GameUI : UIWindow
     public GameObject UnPoweredCellPrefab;
     public GameObject GearToPowerPrefab;
     
-    [SerializeField]private List<GameObject> _UnpoweredGears = new List<GameObject>();
+    public List<GearToPower> _UnpoweredGears = new List<GearToPower>();
     public bool currentleveliscompleted = false;
     
     public Transform GearBox;
@@ -42,12 +44,18 @@ public class GameUI : UIWindow
     public Gear SelectedGear { get; private set; }
     public PoweredGear currentPoweredGear;
     private UIManager uiManager;
+    public CompletedUI completedUI;
+    
+    public TimerController timer;
+
+    private List<LevelButtons> LevelStars;
     
 
     public override void Initialize()
     {
         base.Initialize();
         uiManager = FindFirstObjectByType<UIManager>();
+        
     }
     public void GenerateDropcellsGrid()
     {
@@ -77,6 +85,8 @@ public class GameUI : UIWindow
                 _cells[x, y] = dropCell;
             }
         }
+        timer.ResetTimer();
+        timer.StartTimer();
     }
 
     public void GeneratePoweredGrid()
@@ -103,22 +113,22 @@ public class GameUI : UIWindow
         foreach (Transform child in UnPoweredGrid.transform)
         {
             Destroy(child.gameObject);
-            _UnpoweredGears.Clear();
         }
+        _UnpoweredGears.Clear();
+        
         for (int i = 0; i < currentlevelScriptable._gearSlotsX; i++)
         {
             GameObject unPoweredCell = Instantiate(UnPoweredCellPrefab, UnPoweredGrid.transform);
             if (Array.Exists(currentlevelScriptable.UnPoweredPositions, pos => pos == i))
             {
-                
                 GameObject unpoweredinstance = Instantiate(GearToPowerPrefab, unPoweredCell.transform);
-                _UnpoweredGears.Add(unPoweredCell);
-                
-                GearToPower getunpoweredgear = unpoweredinstance.GetComponent<GearToPower>();
-                getunpoweredgear.Xposition = i;
+                GearToPower gear = unpoweredinstance.GetComponent<GearToPower>();
+                gear.Xposition = i;
+
+                _UnpoweredGears.Add(gear); // ✅ Guardamos solo los de destino
             }
-            
         }
+
         
     }
     private void AdjustCellSize(int width, int height)
@@ -231,13 +241,49 @@ public class GameUI : UIWindow
 
         foreach (var gear in _UnpoweredGears)
         {
-            GearToPower gearcs = gear.GetComponent<GearToPower>();
-            if (gearcs !=null && !gearcs.ispowered) 
-                return; // si uno aún no tiene power → salir sin completar
+            if (!gear.ispowered)
+                return; // si uno aún no tiene power → no completar todavía
         }
-        // ✅ Si llegamos aquí → todos están powereados
+
         currentleveliscompleted = true;
         uiManager.ShowUI("CompletedUI");
+        completedUI.ShowStars(CalculateObtainedStars());
+        ChangeLevelStars();
+
+    }
+
+    public int CalculateObtainedStars()
+    {
+        timer.PauseTimer();
+        float timeLeft = timer.GetCurrentTime();
+        
+        if (timeLeft < 0) timeLeft = 0;
+        
+        float percentage = timeLeft / 60f;
+
+        if (percentage > 0.7f)
+            return 3;
+        else if (percentage > 0.4f)
+            return 2;
+        else if (percentage > 0f)
+            return 1;
+        else
+            return 0;
+    }
+   
+    public void ChangeLevelStars()
+    {
+        LevelStars = FindObjectsByType<LevelButtons>(FindObjectsSortMode.None).ToList();
+        LevelButtons currentButton = LevelStars.Find(b => b.levelIndex == currentlevelScriptable.currentLevel);
+
+        if (currentButton != null)
+        {
+            int starsEarned = CalculateObtainedStars();
+
+            // Luego activamos solo las que correspondan
+            for (int i = 0; i < starsEarned && i < currentButton.stars.Count; i++)
+                currentButton.stars[i].SetActive(true);
+        }
     }
     #endregion
 }

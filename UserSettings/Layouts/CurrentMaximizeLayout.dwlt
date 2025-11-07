@@ -245,9 +245,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e67effff
+      m_SelectedIDs: dcee0000
       m_LastClickedID: 0
-      m_ExpandedIDs: f27efffffe7effffdea2ffff56a3ffff92a3ffffcea3ffffc0b6ffffccb6ffff08b7ffff38b7ffff44b7ffff64d6ffffa2d6ffffaed6fffff8fafffff4ffffff72ed000078ed0000aeed00000cee00001eee000038ee000072ee000076ee0000
+      m_ExpandedIDs: f8faffff42ed00006eed00008eed00000cee00001cee00003eee000046ee00004eee000064ee000076ee0000a2ee0000c8ee0000ccee0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -877,9 +877,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 437.74466, y: 1150.502, z: -4.458364}
+    m_Target: {x: 790.57983, y: 959.23505, z: -13.282785}
     speed: 2
-    m_Value: {x: 437.74466, y: 1150.502, z: -4.458364}
+    m_Value: {x: 790.57983, y: 959.23505, z: -13.282785}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -929,9 +929,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 587.26294
+    m_Target: 1469.7091
     speed: 2
-    m_Value: 587.26294
+    m_Value: 1469.7091
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -984,8 +984,8 @@ MonoBehaviour:
     y: 0
     width: 192.79999
     height: 451.2
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1010,14 +1010,14 @@ MonoBehaviour:
     y: 451.2
     width: 1149.6
     height: 265.59998
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1065,7 +1065,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Game
+    - Assets/Prefabs/Buttons
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1075,16 +1075,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Game
+  - Assets/Prefabs/Buttons
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\zanah\Documents\Unity\Proyectos\Gear Force
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 116.400024}
-    m_SelectedIDs: 3c040100
-    m_LastClickedID: 66620
-    m_ExpandedIDs: 00000000ae030100b0030100b2030100b4030100b603010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 7a040100
+    m_LastClickedID: 66682
+    m_ExpandedIDs: 0000000010040100120401001404010016040100180401009004010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1113,7 +1113,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ae030100b0030100b2030100b4030100b6030100
+    m_ExpandedIDs: 000000001004010012040100140401001604010018040100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1139,8 +1139,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 98d6ffff
-    m_LastClickedInstanceID: -10600
+    m_SelectedInstanceIDs: dcee0000
+    m_LastClickedInstanceID: 61148
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000008fa000086ef0000000000007c0501004eed000070070100e8050100a0ed0000b2040100440501004eef0000
     m_RenameOverlay:
@@ -1159,7 +1159,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 7}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1226,8 +1226,8 @@ MonoBehaviour:
     y: 0
     width: 386.40002
     height: 716.8
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using Unity.VisualScripting;
@@ -14,7 +15,8 @@ public class LevelButtons : Level
     public Button button;
     public TMP_Text buttontxt;
     public GameUI gameUI;
-    
+    public List<GameObject> stars;
+    public int levelIndex;
     private void Start()
     {
         gameUI = GameObject.Find("GameUI").GetComponent<GameUI>();
@@ -23,6 +25,7 @@ public class LevelButtons : Level
         for (int i = 0; i < _starsQuantity; i++)
         {
             GameObject starInstance = Instantiate(emptyStar, starsGrid.transform);
+            stars.Add(starInstance);
         }
     }
 

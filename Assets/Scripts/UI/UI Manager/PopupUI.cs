@@ -24,6 +24,12 @@ public class PopupUI : UIWindow
     private void YesClick()
     {
         Debug.Log("Yes Clicked");
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
     private void NoClick()
     {

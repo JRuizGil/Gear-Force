@@ -47,15 +47,16 @@ public class GameUI : UIWindow
     public CompletedUI completedUI;
     
     public TimerController timer;
+    public LevelsUI levelsUI;
 
-    private List<LevelButtons> LevelStars;
     
 
     public override void Initialize()
     {
         base.Initialize();
         uiManager = FindFirstObjectByType<UIManager>();
-        
+        levelsUI = FindFirstObjectByType<LevelsUI>();
+
     }
     public void GenerateDropcellsGrid()
     {
@@ -244,12 +245,15 @@ public class GameUI : UIWindow
             if (!gear.ispowered)
                 return; // si uno aún no tiene power → no completar todavía
         }
-
         currentleveliscompleted = true;
         uiManager.ShowUI("CompletedUI");
-        completedUI.ShowStars(CalculateObtainedStars());
-        ChangeLevelStars();
-
+        int calculatedstars = CalculateObtainedStars();
+        completedUI.ShowStars(calculatedstars);
+        GameObject levelbuttoninstance = levelsUI.levelButtons[currentlevelScriptable.currentLevel];
+        LevelButtons buttoncs = levelbuttoninstance.GetComponent<LevelButtons>();
+        buttoncs.UpdateStars(calculatedstars);
+        levelsUI.SaveLevelStars(currentlevelScriptable.currentLevel, calculatedstars);
+        
     }
 
     public int CalculateObtainedStars()
@@ -271,19 +275,6 @@ public class GameUI : UIWindow
             return 0;
     }
    
-    public void ChangeLevelStars()
-    {
-        LevelStars = FindObjectsByType<LevelButtons>(FindObjectsSortMode.None).ToList();
-        LevelButtons currentButton = LevelStars.Find(b => b.levelIndex == currentlevelScriptable.currentLevel);
-
-        if (currentButton != null)
-        {
-            int starsEarned = CalculateObtainedStars();
-
-            // Luego activamos solo las que correspondan
-            for (int i = 0; i < starsEarned && i < currentButton.stars.Count; i++)
-                currentButton.stars[i].SetActive(true);
-        }
-    }
+    
     #endregion
 }

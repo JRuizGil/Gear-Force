@@ -52,9 +52,12 @@ MonoBehaviour:
   levelScriptable: {fileID: 0}
   starsGrid: {fileID: 8514344023340864311}
   emptyStar: {fileID: 8251091977417474033, guid: a8edecd834e0fb3408cb0f5500a4e165, type: 3}
+  FilledStar: {fileID: 8251091977417474033, guid: 48bc883ab913b8c49896e5704d91b4b2, type: 3}
   button: {fileID: 0}
   buttontxt: {fileID: 4092312321629929477}
   gameUI: {fileID: 0}
+  stars: []
+  levelIndex: 0
 --- !u!1 &3726139812868814790
 GameObject:
   m_ObjectHideFlags: 0

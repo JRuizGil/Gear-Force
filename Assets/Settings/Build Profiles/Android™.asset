@@ -80,7 +80,7 @@ MonoBehaviour:
     - line: '|   numberOfMipsStrippedPerMipmapLimitGroup: {}'
     - line: '|   m_StackTraceTypes: 020000000200000002000000020000000200000001000000'
     - line: '|   iosShowActivityIndicatorOnLoading: -1'
-    - line: '|   androidShowActivityIndicatorOnLoading: -1'
+    - line: '|   androidShowActivityIndicatorOnLoading: 2'
     - line: '|   iosUseCustomAppBackgroundBehavior: 0'
     - line: '|   allowedAutorotateToPortrait: 1'
     - line: '|   allowedAutorotateToPortraitUpsideDown: 1'
@@ -169,6 +169,10 @@ MonoBehaviour:
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
         type: 3}'
+    - line: '|   - {fileID: 11400000, guid: fcf49f4adec3e3046a3b538c5a1180ab, type:
+        2}'
+    - line: '|   - {fileID: -145347854251290139, guid: 30985f65212f72a4b91cf21df0880864,
+        type: 2}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   m_HolographicPauseOnTrackingLoss: 1'
@@ -718,7 +722,8 @@ MonoBehaviour:
     - line: '|   ps4IncludedModules: []'
     - line: '|   ps4attribVROutputEnabled: 0'
     - line: '|   monoEnv: '
-    - line: '|   splashScreenBackgroundSourceLandscape: {instanceID: 0}'
+    - line: '|   splashScreenBackgroundSourceLandscape: {fileID: 4817701662188051869,
+        guid: 1b9d4ac7df1811543a1e285da75820cf, type: 3}'
     - line: '|   splashScreenBackgroundSourcePortrait: {instanceID: 0}'
     - line: '|   blurSplashScreenBackground: 1'
     - line: '|   spritePackerPolicy: '

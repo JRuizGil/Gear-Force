@@ -96,10 +96,10 @@ MonoBehaviour:
     - line: '|   androidBlitType: 2'
     - line: '|   androidResizeableActivity: 1'
     - line: '|   androidDefaultWindowWidth: 1080'
-    - line: '|   androidDefaultWindowHeight: 2340'
-    - line: '|   androidMinimumWindowWidth: 400'
-    - line: '|   androidMinimumWindowHeight: 300'
-    - line: '|   androidFullscreenMode: 3'
+    - line: '|   androidDefaultWindowHeight: 1920'
+    - line: '|   androidMinimumWindowWidth: 1920'
+    - line: '|   androidMinimumWindowHeight: 1080'
+    - line: '|   androidFullscreenMode: 1'
     - line: '|   androidAutoRotationBehavior: 1'
     - line: '|   androidPredictiveBackSupport: 0'
     - line: '|   androidApplicationEntry: 2'
@@ -169,10 +169,6 @@ MonoBehaviour:
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
         type: 3}'
-    - line: '|   - {fileID: 11400000, guid: fcf49f4adec3e3046a3b538c5a1180ab, type:
-        2}'
-    - line: '|   - {fileID: -145347854251290139, guid: 30985f65212f72a4b91cf21df0880864,
-        type: 2}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   m_HolographicPauseOnTrackingLoss: 1'

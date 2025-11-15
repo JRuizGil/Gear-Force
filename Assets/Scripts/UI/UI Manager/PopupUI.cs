@@ -1,8 +1,6 @@
-using System;
-using Dino.UtilityTools.Extensions;
-using TMPro;
+
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 using UnityEngine.UI;
 
 public class PopupUI : UIWindow

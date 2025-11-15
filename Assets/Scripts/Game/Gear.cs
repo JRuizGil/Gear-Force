@@ -1,12 +1,5 @@
-using System;
 using System.Collections.Generic;
-using DG.Tweening;
-using NaughtyAttributes;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Gear : MonoBehaviour

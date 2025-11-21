@@ -25,7 +25,6 @@ public class GameUI : UIWindow
     public GameObject PoweredCellPrefab;
     public GameObject GearPoweredPrefab;
     
-    
     public GameObject UnPoweredGrid;
     public HorizontalLayoutGroup UnPoweredHorizontalLayoutGroup;
     public GameObject UnPoweredCellPrefab;
@@ -48,8 +47,6 @@ public class GameUI : UIWindow
     
     public TimerController timer;
     public LevelsUI levelsUI;
-
-    
 
     public override void Initialize()
     {

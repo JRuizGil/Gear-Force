@@ -29,7 +29,7 @@ public class LevelButtons : Level
     private void onclick()
     {
         gameUI.currentlevelScriptable = levelScriptable;
-        gameUI.currentlevelText.text = "Level " + ((gameUI.currentlevelScriptable.currentLevel).ToString());
+        gameUI.currentlevelText.text = "Level " + (gameUI.currentlevelScriptable.currentLevel + 1).ToString();
         gameUI.gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gameUI.gridLayoutGroup.constraintCount = levelScriptable._gearSlotsX;
         gameUI.width = levelScriptable._gearSlotsX;

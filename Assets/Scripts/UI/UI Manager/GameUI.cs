@@ -47,6 +47,8 @@ public class GameUI : UIWindow
     
     public TimerController timer;
     public LevelsUI levelsUI;
+    public List<GameObject> gearsList = new List<GameObject>();
+
 
     public override void Initialize()
     {
@@ -122,8 +124,7 @@ public class GameUI : UIWindow
                 GameObject unpoweredinstance = Instantiate(GearToPowerPrefab, unPoweredCell.transform);
                 GearToPower gear = unpoweredinstance.GetComponent<GearToPower>();
                 gear.Xposition = i;
-
-                _UnpoweredGears.Add(gear); // ✅ Guardamos solo los de destino
+                _UnpoweredGears.Add(gear);
             }
         }
 
@@ -147,6 +148,7 @@ public class GameUI : UIWindow
 
     public void GenerateLevelGears()
     {
+        gearsList.Clear();
         foreach (Transform gear in GearBox.transform)
         {
             Destroy(gear.gameObject);
@@ -154,6 +156,7 @@ public class GameUI : UIWindow
         for (int i = 0; i < currentlevelScriptable.gears; i++)
         {
             GameObject GearInstance = Instantiate(GearPrefab, GearBox);
+            gearsList.Add(GearInstance);
         }
     }
     public void SelectGear(Gear gear)
@@ -271,7 +274,11 @@ public class GameUI : UIWindow
         else
             return 0;
     }
-   
+
+    public void GenrateObstacles()
+    {
+        
+    }
     
     #endregion
 }

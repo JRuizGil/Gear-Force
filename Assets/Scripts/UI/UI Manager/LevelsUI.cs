@@ -20,7 +20,7 @@ public class LevelsUI : UIWindow
             buttonInstance.GetComponent<LevelButtons>().levelScriptable = levelScriptableList[i];
             var levelButton = buttonInstance.GetComponent<LevelButtons>();
             levelButton.levelIndex = i;
-            levelButton.buttontxt.text = $"Level {levelButton.levelScriptable.currentLevel}";
+            levelButton.buttontxt.text = $"Level {levelButton.levelScriptable.currentLevel + 1}";
         }
     }
     public void SaveLevelStars(int levelIndex, int obtainedStars)

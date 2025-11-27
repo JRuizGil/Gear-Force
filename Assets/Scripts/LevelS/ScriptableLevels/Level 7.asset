@@ -19,5 +19,20 @@ MonoBehaviour:
   _gearSlotsX: 7
   _gearSlotsY: 7
   gearstopower: 3
-  PoweredPosition: 4
+  PoweredPosition: 0
   UnPoweredPositions: 010000000300000005000000
+  bDivider: 0
+  bTrivider: 0
+  bDiagonalGear: 0
+  bBlocker: 0
+  bTeleporter: 0
+  DividerPosition: {x: 0, y: 0}
+  TrividerPosition: {x: 0, y: 0}
+  DiagonalGearPosition: {x: 0, y: 0}
+  BlockerPosition: {x: 0, y: 0}
+  TeleporterPosition: {x: 0, y: 0}
+  Divider: {fileID: 0}
+  Trivider: {fileID: 0}
+  DiagonalGear: {fileID: 0}
+  Blocker: {fileID: 0}
+  Teleporter: {fileID: 0}

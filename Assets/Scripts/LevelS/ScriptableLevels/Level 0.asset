@@ -14,10 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelScriptable
   currentLevel: 0
   levelTime: 60
-  gears: 10
+  gears: 4
   isLevelCompleted: 0
   _gearSlotsX: 5
   _gearSlotsY: 5
   gearstopower: 1
   PoweredPosition: 0
   UnPoweredPositions: 00000000
+  bDivider: 0
+  bTrivider: 0
+  bDiagonalGear: 0
+  bBlocker: 1
+  bTeleporter: 0
+  DividerPosition: {x: 0, y: 0}
+  TrividerPosition: {x: 0, y: 0}
+  DiagonalGearPosition: {x: 0, y: 0}
+  BlockerPosition: {x: 0, y: 0}
+  TeleporterPosition: {x: 0, y: 0}
+  Divider: {fileID: 0}
+  Trivider: {fileID: 0}
+  DiagonalGear: {fileID: 0}
+  Blocker: {fileID: 0}
+  Teleporter: {fileID: 0}

@@ -14,8 +14,10 @@ public class LevelButtons : Level
     public GameUI gameUI;
     public List<GameObject> stars;
     public int levelIndex;
+    public GearCounter gearCounter;
     private void Start()
     {
+        
         gameUI = GameObject.Find("GameUI").GetComponent<GameUI>();
         button = gameObject.GetComponentInChildren<Button>();
         button.onClick.AddListener(onclick);
@@ -29,6 +31,7 @@ public class LevelButtons : Level
     private void onclick()
     {
         gameUI.currentlevelScriptable = levelScriptable;
+        gameUI.GenerateGearboxes();
         gameUI.currentlevelText.text = "Level " + (gameUI.currentlevelScriptable.currentLevel + 1).ToString();
         gameUI.gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gameUI.gridLayoutGroup.constraintCount = levelScriptable._gearSlotsX;

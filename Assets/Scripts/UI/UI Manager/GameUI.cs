@@ -34,6 +34,7 @@ public class GameUI : UIWindow
     public bool currentleveliscompleted = false;
     
     public Transform GearBox;
+    public GameObject GearBoxPrefab;
     
     public GridLayoutGroup gridLayoutGroup;
     
@@ -49,7 +50,8 @@ public class GameUI : UIWindow
     public LevelsUI levelsUI;
     public List<GameObject> gearsList = new List<GameObject>();
 
-
+    public Transform GearBoxGrid;
+    public GameObject SpecialSlot;
     public override void Initialize()
     {
         base.Initialize();
@@ -89,6 +91,16 @@ public class GameUI : UIWindow
         timer.StartTimer();
     }
 
+    public void GenerateGearboxes()
+    {
+        foreach (Transform child in GearBoxGrid.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        var smallgearbox =Instantiate(GearBoxPrefab, GearBoxGrid);
+        GearBox = smallgearbox.GetComponent<Transform>();
+        GenerateObstacles();
+    }
     public void GeneratePoweredGrid()
     {
         foreach (Transform child in PoweredGrid.transform)
@@ -149,8 +161,10 @@ public class GameUI : UIWindow
     public void GenerateLevelGears()
     {
         gearsList.Clear();
-        foreach (Transform gear in GearBox.transform)
+        foreach (Transform gear in GearBox)
         {
+            //if (gear.GetComponent<TMP_Text>() != null)
+            //    continue;
             Destroy(gear.gameObject);
         }
         for (int i = 0; i < currentlevelScriptable.gears; i++)
@@ -274,11 +288,35 @@ public class GameUI : UIWindow
         else
             return 0;
     }
-
-    public void GenrateObstacles()
+    public void GenerateObstacles()
     {
-        
+        if (currentlevelScriptable.bDivider)
+        {
+            var Specialslot1 = Instantiate(SpecialSlot,GearBoxGrid.transform);
+            var Divider = Instantiate(currentlevelScriptable.Divider,Specialslot1.transform);
+        }
+        if (currentlevelScriptable.bBlocker)
+        {
+            
+        }
+        if (currentlevelScriptable.bDiagonalGear)
+        {
+            
+        }
+        if (currentlevelScriptable.bTeleporter)
+        {
+            
+        }
+        if (currentlevelScriptable.bTrivider)
+        {
+            
+        }
     }
+    //void GenerateDivider() { }
+    //void GenerateBlocker() { }
+    //void GenerateDiagonalGear() { }
+    //void GenerateTeleporter() { }
+    //void GenerateTrivider() { }
     
     #endregion
 }

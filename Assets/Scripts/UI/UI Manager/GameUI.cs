@@ -225,17 +225,20 @@ public class GameUI : UIWindow
 
         // 4) Obtener el gear que esté en esa celda (si lo hay)
         Gear rootGear = startCell.GetComponentInChildren<Gear>();
-        if (rootGear == null) return;
+        DiagonalGear diag = rootGear as DiagonalGear;
+        if (diag != null)
+        {
+            diag.ispowered = true;
+            diag.direction = -powered.direction;
+            diag.SpreadPower();    // << ejecuta el override correctamente
+            return;
+        }
 
-        // 5) Encender el gear inicial y propagar
+        // si no es diagonal, usar el método base
         rootGear.ispowered = true;
-
-        // Opcional: sincronizar la dirección con el PoweredGear
-        // Si quieres que el gear en la celda gire en sentido contrario al PoweredGear, usa:
         rootGear.direction = -powered.direction;
-        // Si prefieres una dirección fija, puedes poner rootGear.direction = 1;
-        
         rootGear.SpreadPower();
+
         CheckIfLevelCompleted();
     }
     public GearToPower GetUnPoweredGearAtColumn(int x)

@@ -1,51 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Gear : MonoBehaviour
+public class DiagonalGear : Gear
 {
-    public GameUI gameUI;
-    public Button button;
-    public bool isOnDropcell;
-    public float rotationSpeed = 10;
-    public bool ispowered = false;
-    public int direction = 1;
-    public int xpos;
-    public int ypos;
-    void Start()
-    {
-        button = gameObject.GetComponent<Button>();
-        button.onClick.AddListener(OnGearclick);
-        gameUI = FindFirstObjectByType<GameUI>();
-        CheckPosition();
-    }
-    private void OnGearclick()
-    {
-        gameUI.SelectGear(this);
-        ispowered = false;
-    }
-    private void FixedUpdate()
-    {
-        if (ispowered && isOnDropcell)
-        {
-            transform.Rotate(0f, 0f, rotationSpeed * direction * Time.fixedDeltaTime);
-        }
-    }
-    public void CheckPosition()
-    {
-        DropCell poscheck = GetComponentInParent<DropCell>();
-        if (poscheck != null)
-        {
-            xpos = poscheck.slotX;
-            ypos = poscheck.slotY;
-            isOnDropcell = true;
-        }
-        else
-        {
-            isOnDropcell = false;
-        }
-    }
-    public virtual void SpreadPower()
+    public override void SpreadPower()
     {
         if (!isOnDropcell) return;
 
@@ -77,19 +35,27 @@ public class Gear : MonoBehaviour
 
             (int x, int y)[] neighbors = new (int, int)[]
             {
-                (current.xpos, current.ypos + 1),
-                (current.xpos, current.ypos - 1),
-                (current.xpos - 1, current.ypos),
-                (current.xpos + 1, current.ypos)
+                (current.xpos + 1, current.ypos - 1),
+                (current.xpos - 1, current.ypos + 1),
+                (current.xpos + 1, current.ypos + 1),
+                (current.xpos - 1, current.ypos - 1)
             };
 
             foreach (var (x, y) in neighbors)
             {
                 DropCell cell = gameUI.GetCell(x, y);
-                if (cell == null) continue;
+                if (cell == null)
+                {
+                    Debug.Log($"No hay celda en la diagonal ({x},{y})");
+                    continue;
+                }
 
                 Gear neighbor = cell.GetComponentInChildren<Gear>();
-                if (neighbor == null) continue;
+                if (neighbor == null)
+                {
+                    Debug.Log($"La celda ({x},{y}) existe pero NO tiene Gear");
+                    continue;
+                }
                 if (visited.Contains(neighbor)) continue;
 
                 neighbor.ispowered = true;              // ✅ Encender el engranaje vecino

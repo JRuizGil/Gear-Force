@@ -32,7 +32,7 @@ MonoBehaviour:
   BlockerPosition: {x: 0, y: 0}
   TeleporterPosition: {x: 0, y: 0}
   Divider: {fileID: 3352180324456571099, guid: de5f54ae48254e04691a3a83f0b3e6c8, type: 3}
-  Trivider: {fileID: 3352180324456571099, guid: de5f54ae48254e04691a3a83f0b3e6c8, type: 3}
+  Trivider: {fileID: 0}
   DiagonalGear: {fileID: 2179217910079652712, guid: f0a7a88e56f2d054a87ff70341b8bfef, type: 3}
   Blocker: {fileID: 2179217910079652712, guid: 2d577512ea9aeed4a9fe50f686ca6a3a, type: 3}
   Teleporter: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 79943204335674050}
   - component: {fileID: 1896705445478643319}
   - component: {fileID: -3828320394107419444}
-  - component: {fileID: -8763992653635110713}
+  - component: {fileID: -4220093715094552096}
   m_Layer: 0
   m_Name: DiagonalGear
   m_TagString: Untagged
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-8763992653635110713
+--- !u!114 &-4220093715094552096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,14 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2179217910079652712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d068245c9f87dc43aa29c4b6884d37a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5373bb4c4fcebaf46b700eb90a172b3b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gear
-  gameUI: {fileID: 0}
-  button: {fileID: 0}
-  isOnDropcell: 0
-  rotationSpeed: 10
-  ispowered: 0
-  direction: 1
-  xpos: 0
-  ypos: 0
+  m_EditorClassIdentifier: '::'

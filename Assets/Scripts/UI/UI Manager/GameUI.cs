@@ -297,19 +297,23 @@ public class GameUI : UIWindow
         }
         if (currentlevelScriptable.bBlocker)
         {
-            
+            var Specialslot2 = Instantiate(SpecialSlot,GearBoxGrid.transform);
+            var Blocker = Instantiate(currentlevelScriptable.Blocker,Specialslot2.transform);
         }
         if (currentlevelScriptable.bDiagonalGear)
         {
-            
+            var Specialslot3 = Instantiate(SpecialSlot,GearBoxGrid.transform);
+            var DiagonalGear = Instantiate(currentlevelScriptable.DiagonalGear,Specialslot3.transform);
         }
         if (currentlevelScriptable.bTeleporter)
         {
-            
+            var specialslot4 = Instantiate(SpecialSlot,GearBoxGrid.transform);
+            var Teleporter = Instantiate(currentlevelScriptable.Teleporter,specialslot4.transform);
         }
         if (currentlevelScriptable.bTrivider)
         {
-            
+            var specialslot5 = Instantiate(SpecialSlot,GearBoxGrid.transform);
+            var Trivider = Instantiate(currentlevelScriptable.Trivider,specialslot5.transform);
         }
     }
     //void GenerateDivider() { }

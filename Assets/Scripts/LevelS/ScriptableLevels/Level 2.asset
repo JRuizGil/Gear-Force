@@ -24,15 +24,15 @@ MonoBehaviour:
   bDivider: 0
   bTrivider: 0
   bDiagonalGear: 0
-  bBlocker: 0
-  bTeleporter: 0
+  bBlocker: 1
+  bTeleporter: 1
   DividerPosition: {x: 0, y: 0}
   TrividerPosition: {x: 0, y: 0}
   DiagonalGearPosition: {x: 0, y: 0}
-  BlockerPosition: {x: 0, y: 0}
+  BlockerPosition: {x: 2, y: 2}
   TeleporterPosition: {x: 0, y: 0}
-  Divider: {fileID: 0}
+  Divider: {fileID: 3352180324456571099, guid: de5f54ae48254e04691a3a83f0b3e6c8, type: 3}
   Trivider: {fileID: 0}
-  DiagonalGear: {fileID: 0}
-  Blocker: {fileID: 0}
+  DiagonalGear: {fileID: 2179217910079652712, guid: f0a7a88e56f2d054a87ff70341b8bfef, type: 3}
+  Blocker: {fileID: 2179217910079652712, guid: 2d577512ea9aeed4a9fe50f686ca6a3a, type: 3}
   Teleporter: {fileID: 0}
